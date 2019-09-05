@@ -32,6 +32,10 @@ Content-Type: text/plain                                          #表单中文�
 
 ### 3.抓包数据展示
 ```
+#请求头数据
+multipart/form-data; boundary=----WebKitFormBoundaryT6Bt8Wd1IDDQYKBW
+
+#请求头体数据
 ------WebKitFormBoundaryIAle5fTnX18fxZYz
 Content-Disposition: form-data; name="submitter"
 
@@ -66,6 +70,8 @@ ff e1 09 50 68 74 74 70 3a 2f 2f 6e 73 2e 61 64      Phttp://ns.ad
 ...
 ------WebKitFormBoundaryIAle5fTnX18fxZYz--
 ```
+注意：上面是浏览器的抓包数据，这里它放了一个烟雾弹，boundary的实际值为``----WebKitFormBoundaryT6Bt8Wd1IDDQYKBW``，所以在下面数据开始的标示有六个``-``，误让你以为六个``-``开始，实际上里面的四个``-``是boundary的值。
+
 ### 4.安卓&iOS没有这种表单组件改如何上传文本内容的呢？原理类似，遵循RFC1867协议规范：
 ios如下，安卓雷同
 ```swift
